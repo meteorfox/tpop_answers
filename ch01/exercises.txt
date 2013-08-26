@@ -92,3 +92,30 @@ Answer:
 
 bit = val & 1;
 
+
+// Exercise 1-5. What is wrong with this excerpt?
+
+int read(int *ip) {
+    scanf("%d", ip);
+    return *ip;
+}
+    ....
+insert(&graph[vert], read(&val), read(&ch));
+
+Answer:
+
+The order in which val, or ch will be read is not guaranteed.
+
+
+// Exercise 1-6. List all the different outputs this could produce with various
+orders of evaulation:
+
+n = 1;
+printf("%d %d\n", n++, n++);
+
+Answer:
+1 1
+1 2
+2 1
+
+
