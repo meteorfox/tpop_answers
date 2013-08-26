@@ -1,0 +1,46 @@
+// Exercise 1-1 Comment on the choice of names and values in the following code.
+#define TRUE 0
+#define FALSE 1
+
+if ((ch = getchar()) == EOF)
+  not_eof = FALSE;
+
+Answer:
+The constants TRUE, and FALSE might confuse readers since in C, False
+is 0, and any other number that is not 0 is True.
+
+Also a better name for not_eof, is is_eof, since it's really true, and not false.
+
+
+
+// Exercise 1-2. Improve this function:
+
+int smaller(char *s, char *t) {
+    if (strcomp(s, t) < 1)
+       return 1;
+    else
+       return 0;
+}
+
+
+Answer:
+It seems the intention of this functions is return true if the string s is
+less or equal to the string t. Therefore, lessequal might be a better name for
+this function.
+
+Also, the body complicates things with the if/else block, this can be simplified
+to the following:
+
+int lessequal(char *s, char *t) {
+    return strcmp(s, t) <= 0;
+}
+
+Since this will return true only if s is less than or equal to t.
+
+
+// Exercise 1-3. Read this code aloud
+
+if ((falloc(SMRHSHSCRTCH, S_IFEXT | 0644, MAXRODDHSH)) < 0)
+   ...
+
+
