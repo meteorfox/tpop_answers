@@ -44,3 +44,51 @@ if ((falloc(SMRHSHSCRTCH, S_IFEXT | 0644, MAXRODDHSH)) < 0)
    ...
 
 
+
+// Exercise 1-4. Improve each of these fragments:
+
+a.
+if ( !(c == 'y' || c == 'Y'))
+    return;
+
+Answer:
+
+if ( (c != 'y') && (c != 'Y') )
+    return;
+
+
+b.
+length = (length < BUFSIZE) ? length : BUFSIZE;
+
+Answer:
+
+if (length >= BUFSIZE)
+    length = BUFSIZE;
+
+c.
+flag = flag ? 0 : 1;
+
+Answer:
+
+flag = !flag;
+
+
+d.
+quote = (*line == '"') ? 1 : 0;
+
+Answer:
+
+quote = (*line == '"');
+ 
+
+
+e.
+if (val & 1)
+    bit = 1;
+else
+    bit = 0;
+
+Answer:
+
+bit = val & 1;
+
