@@ -1,3 +1,4 @@
-Ansers to The Practice of Programming book
+Answers to 
+The Practice of Programming book
 ============
 
